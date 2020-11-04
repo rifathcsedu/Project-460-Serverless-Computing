@@ -1,0 +1,22 @@
+\section*{Related Work}
+\label{sec:related_work}
+% \todo{Saidur will work on it}\\
+
+The perspective of serverless applications requires multiple clients' workload run on the same hardware with minimal overhead. However, the container provides weak security and minimal overhead, where the virtualization provides robust security and high overhead. So, Alexandru \etal\ developed Firecracker, a new open-source Virtual Machine Monitor (VMM) specialized for serverless workloads but generally useful for containers, functions, and other compute workloads within a reasonable set of constraints \cite{firecracker}.
+
+
+Serverless services impose severe restrictions for some applications, such as using a predefined set of programming languages or difficulty installing and deploying external libraries. The author \cite{PEREZ201850} proposed a framework and a methodology to create Serverless Container-aware ARchitectures (SCAR). The SCAR framework creates highly-parallel event-driven serverless applications that run on customized runtime environments.
+
+Hyungro \etal\ hypothesizes that the current serverless computing environments can support dynamic applications parallel when a partitioned task is executable on a small function instance. To verify the hypothesis, they deployed a series of functions for distributed data processing to address the elasticity and then demonstrated the differences between serverless computing and virtual machines for cost efficiency and resource utilization based on throughput, network bandwidth, a file I/O \cite{lee2018performance}. 
+
+Serverless FaaS Functions are triggered by users and are provisioned dynamically through containers or virtual machines(VMs). However, the start-up delays of containers or VMs usually lead to the relatively high latency of response to cloud users. Moreover, the communication between different functions generally depends on virtual net devices or shared memory and may cause extremely high-performance overhead. The authors \cite{tan2020unikernel} propose a lightweight approach to serverless computing named Unikernel-as-a-Function(UaaF) that offers extremely low start-up latency to execute functions and an efficient communication model to speed up inter-functions interactions. They also employ a new hardware technique VMFUNC to invoke functions in other unikernels seamlessly like IPC.
+
+
+Linux containers offer a lightweight service to load applications into images, put them in isolated environments, and scan periodically to detect vulnerabilities using a vulnerability scanning service. The authors \cite{bila2017serverless} investigate the same architecture for mitigating the threat to a serverless architecture.
+
+
+Kalev \etal\ shows a method named Trapeze to provide security on serverless systems using dynamic information flow control (IFC). It encapsulates each serverless function in a sandbox, redirecting all the interactions to the security shim and enforces the global security policy~\cite{alpernas2018}. 
+
+% \subsection*{Container}
+% \subsection*{VM}
+% \subsection*{Serverless Computing}
